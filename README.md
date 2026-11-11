@@ -1,6 +1,6 @@
 # TronoRex · Dashboard corporativo
 
-Proyecto transversal de **Diseño de Interfaces (2º DAM)**. Es una aplicación de escritorio hecha con **Electron + React + TypeScript + Vite** para TronoRex, una empresa ficticia de váteres ("Váteres con historia").
+He hecho uso de la ia y dentro del proyecto hay una cosa que son los _Iconos_ que no he entendido nada de lo que es, asi que he procedido a comentar todos sus usos y dejar el componente ahi a ver si me lo puedes explicar porque hay muchos símbolos que no tengo ni la menor idea de lo que significan.
 
 ## Funcionalidad
 
@@ -26,10 +26,3 @@ src/
 electron/          Proceso principal y preload
 ```
 
-## Uso
-
-```bash
-npm install
-npm run dev     # abre la app de Electron en modo desarrollo
-npm run build   # genera el instalable en /release
-```
