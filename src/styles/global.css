@@ -1,0 +1,134 @@
+/* ==========================================================
+   TronoRex · variables y estilos base
+   Colores tomados del logo
+   ========================================================== */
+:root {
+  --petroleo: #123a3a;
+  --petroleo-claro: #1f5452;
+  --naranja: #e0590f;
+  --naranja-oscuro: #b84508;
+  --mostaza: #f2c04e;
+  --mostaza-claro: #fbe7b5;
+  --verde: #5fa548;
+  --verde-claro: #e1f0d8;
+  --crema: #eef3ee;
+  --porcelana: #fbfaf6;
+  --blanco: #ffffff;
+  --texto-suave: #4d6766;
+
+  --borde: 2px solid var(--petroleo);
+  --sombra: 4px 4px 0 var(--petroleo);
+  --sombra-hover: 6px 6px 0 var(--petroleo);
+  --radio: 14px;
+
+  --fuente-titulos: 'Archivo Black', 'Arial Black', sans-serif;
+  --fuente-texto: 'Rubik', system-ui, sans-serif;
+
+  font-family: var(--fuente-texto);
+  line-height: 1.5;
+  color: var(--petroleo);
+  background-color: var(--crema);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--crema);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 2px;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border: var(--borde);
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--petroleo);
+  transition: transform 0.12s, box-shadow 0.12s, background-color 0.12s;
+}
+
+.boton:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--petroleo);
+}
+
+.boton:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--petroleo);
+}
+
+.boton--primario {
+  background: var(--naranja);
+  color: var(--blanco);
+}
+
+.boton--primario:hover {
+  background: var(--naranja-oscuro);
+}
+
+.boton--secundario {
+  background: var(--blanco);
+  font-size: 0.9rem;
+  padding: 0.45rem 0.9rem;
+}
+
+.boton--secundario:hover {
+  background: var(--mostaza-claro);
+}
+
+/* ---------- Logo recortado en círculo ---------- */
+/* El PNG trae el nombre debajo; aquí mostramos solo el círculo del dino */
+.logo-circulo {
+  position: relative;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-circulo img {
+  position: absolute;
+  width: 163%;
+  left: -31.6%;
+  top: -22.5%;
+}
+
+.logo-circulo--grande {
+  width: 130px;
+  height: 130px;
+}

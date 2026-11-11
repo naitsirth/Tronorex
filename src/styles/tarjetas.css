@@ -1,0 +1,219 @@
+/* ==========================================================
+   Tarjetas: empleados, activos e incidencias
+   ========================================================== */
+.tarjeta {
+  position: relative;
+  background: var(--blanco);
+  border: var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tarjeta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--sombra-hover);
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.tarjeta__titulo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tarjeta__titulo--recortado {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tarjeta__categoria {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.tarjeta__dato {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tarjeta__dato a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.tarjeta__dato a:hover {
+  color: var(--naranja);
+  text-decoration: underline;
+}
+
+.tarjeta__dato svg {
+  flex-shrink: 0;
+}
+
+/* ---------- Etiquetas ---------- */
+.etiqueta {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border: var(--borde);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.etiqueta--alto-valor {
+  background: var(--mostaza);
+}
+
+.etiqueta--resuelta {
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+.etiqueta--pendiente {
+  background: var(--naranja);
+  color: var(--blanco);
+}
+
+/* ---------- Empleado ---------- */
+.tarjeta--empleado {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border: var(--borde);
+  border-radius: 50%;
+  background: var(--mostaza);
+  font-family: var(--fuente-titulos);
+  font-size: 1.15rem;
+}
+
+/* ---------- Activo de inventario ---------- */
+.tarjeta--activo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tarjeta--activo .tarjeta__cuerpo {
+  padding: 1rem 1.1rem 1.2rem;
+  flex: 1;
+}
+
+.activo__imagen {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  height: 190px;
+  padding: 1.25rem;
+  background: var(--blanco);
+  border-bottom: var(--borde);
+}
+
+.activo__imagen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.activo__imagen .etiqueta {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  box-shadow: 2px 2px 0 var(--petroleo);
+}
+
+.activo__precio {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  color: var(--petroleo);
+}
+
+.tarjeta--alto-valor {
+  background: var(--mostaza-claro);
+}
+
+.tarjeta--alto-valor .activo__precio {
+  color: var(--naranja);
+}
+
+/* ---------- Incidencia ---------- */
+.tarjeta--incidencia {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.tarjeta--incidencia .tarjeta__cuerpo {
+  flex: 1;
+}
+
+.tarjeta--incidencia .tarjeta__titulo {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.tarjeta--incidencia .tarjeta__titulo::first-letter {
+  text-transform: uppercase;
+}
+
+.incidencia__icono {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: var(--borde);
+  border-radius: 50%;
+}
+
+.tarjeta--resuelta {
+  background: var(--verde-claro);
+}
+
+.tarjeta--resuelta .incidencia__icono {
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+.tarjeta--pendiente {
+  background: var(--blanco);
+  border-left-width: 8px;
+  border-left-color: var(--naranja);
+}
+
+.tarjeta--pendiente .incidencia__icono {
+  background: var(--mostaza);
+}
